@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+
+    .grid-container {
+      background-color: #2196F3;
+      padding: 0px;
+    }
+
+    .title {
+      background: #ffffff;
+      text-align: center;
+      color: #2196F3;
+      padding: 5px 0;
+    }
+
+    .slidecontainer {
+      background: #2196F3;
+      padding: 10px;
+      text-align: center;
+      padding: 20px 0;
+      font-size: 30px;
+    }
+    /*keeping leveles element from growing*/
+    #levels { width: 20px; display: inline-block; }
+
+    #pyramid {
+      background: rgba(255, 255, 255, 0.8);
+      padding: 10px;
+      text-align: center;
+      font-size: 30px;
+      min-height: 400px;
+    }
+
+    @media (min-width: 768px) {
+		  .grid-container {
+        width: 50%;
+        margin: 0 auto;
+		  }
+		}
+
+  </style>
+</head>
+<body>
+  <div class="grid-container">
+    <div class="title"><h1>Pryamid Slider</h1></div>
+    <div class="slidecontainer">
+      <span id="symbol">
+        <select id="dropdown">
+          <option value="#">#</option>
+          <option value="@">@</option>
+          <option value="X">X</option>
+          <option value="$">$</option>
+        </select>
+      </span>
+      <input type="range" min="0" max="10" value="0" id="slider1"> <!-- This is the slider -->
+      <span id="levels">0</span>
+    </div>
+    <div id="pyramid"></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
